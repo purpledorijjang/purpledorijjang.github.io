@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto YouTube Music Developer Page | 개발자 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .app-info {
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #27ae60;
+        }
+        .contact-info {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .en, .ko {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('ko')">한국어</button>
+    </div>
+
+    <h1 class="en">Auto YouTube Music Developer Page</h1>
+    <h1 class="ko">Auto YouTube Music 개발자 페이지</h1>
+    
+    <div class="app-info">
+        <h2 class="en">App Introduction</h2>
+        <h2 class="ko">앱 소개</h2>
+        <p class="en">Auto YouTube Music is an Android app that automatically plays YouTube Music according to user-defined schedules.</p>
+        <p class="ko">Auto YouTube Music은 사용자가 설정한 스케줄에 따라 자동으로 YouTube Music을 재생하는 안드로이드 앱입니다.</p>
+    </div>
+
+    <h2 class="en">Key Features</h2>
+    <h2 class="ko">주요 기능</h2>
+    <ul class="feature-list">
+        <li class="en">Custom schedule setting</li>
+        <li class="ko">사용자 정의 스케줄 설정</li>
+        <li class="en">Automatic YouTube Music playback</li>
+        <li class="ko">자동 YouTube Music 재생</li>
+        <li class="en">Weather reflection feature</li>
+        <li class="ko">날씨 반영 기능</li>
+        <li class="en">Battery optimization exclusion support</li>
+        <li class="ko">배터리 최적화 제외 지원</li>
+        <li class="en">Accessibility service utilization</li>
+        <li class="ko">접근성 서비스 활용</li>
+        <li class="en">Detailed log recording</li>
+        <li class="ko">상세한 로그 기록</li>
+    </ul>
+
+    <h2 class="en">Tech Stack</h2>
+    <h2 class="ko">기술 스택</h2>
+    <ul>
+        <li class="en">Language: Kotlin</li>
+        <li class="ko">언어: Kotlin</li>
+        <li class="en">Database: Room</li>
+        <li class="ko">데이터베이스: Room</li>
+        <li class="en">Asynchronous Processing: Coroutines</li>
+        <li class="ko">비동기 처리: Coroutines</li>
+        <li class="en">UI: RecyclerView, ConstraintLayout</li>
+        <li class="ko">UI: RecyclerView, ConstraintLayout</li>
+    </ul>
+
+    <h2 class="en">Developer Information</h2>
+    <h2 class="ko">개발자 정보</h2>
+    <div class="contact-info">
+        <p class="en">Email: developer@example.com</p>
+        <p class="ko">이메일: developer@example.com</p>
+        <p class="en">GitHub: <a href="https://github.com/yourusername" style="color: white;">https://github.com/yourusername</a></p>
+        <p class="ko">GitHub: <a href="https://github.com/yourusername" style="color: white;">https://github.com/yourusername</a></p>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.en, .ko').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+        }
+        // 기본 언어를 한국어로 설정
+        switchLanguage('ko');
+    </script>
+</body>
+</html>
