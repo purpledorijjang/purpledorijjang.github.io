@@ -133,3 +133,14 @@
         <p class="en">GitHub: <a href="https://github.com/purpledorijjang" style="color: white;">https://github.com/purpledorijjang</a></p>
         <p class="ko">GitHub: <a href="https://github.com/purpledorijjang" style="color: white;">https://github.com/purpledorijjang</a></p>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.en, .ko').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.' + lang).forEach(el => el.style.display = 'block');
+        }
+        // 기본 언어를 한국어로 설정
+        switchLanguage('ko');
+    </script>
+</body>
+</html>
